@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "zMCTQJ4z2tsj3Q3UKuBpaH6uBGMa9WNrjPqQbIlR4CDukyxFhnOPUlXN4+idtgb+42Wco0dt+dcW47D3XBIV1A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jrewi\\source\\repos\\Covid19TR\\Covid19TR\\Covid19TR.iOS\\Covid19TR.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jrewi\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\jrewi\\.nuget\\packages\\syncfusion.licensing\\18.1.0.48\\syncfusion.licensing.18.1.0.48.nupkg.sha512",
+    "C:\\Users\\jrewi\\.nuget\\packages\\syncfusion.xamarin.core\\18.1.0.48\\syncfusion.xamarin.core.18.1.0.48.nupkg.sha512",
+    "C:\\Users\\jrewi\\.nuget\\packages\\syncfusion.xamarin.sfchart\\18.1.0.48\\syncfusion.xamarin.sfchart.18.1.0.48.nupkg.sha512",
+    "C:\\Users\\jrewi\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.4.0.991265\\xamarin.forms.4.4.0.991265.nupkg.sha512"
+  ],
+  "logs": []
+}

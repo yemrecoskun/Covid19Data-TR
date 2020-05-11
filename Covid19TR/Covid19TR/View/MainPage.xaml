@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             xmlns:local="clr-namespace:Covid19TR"
+             mc:Ignorable="d"
+             x:Class="Covid19TR.MainPage"
+             Title="Covid19 Türkiye" BarTextColor="#FFFFFF" BarBackgroundColor="DarkGreen">
+    <TabbedPage.BindingContext>
+        <local:Covid19ViewModel/>
+    </TabbedPage.BindingContext>
+
+    <ContentPage Title="Bugünün Verileri" Icon="data.png">
+        <StackLayout>
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0">
+                    <Label Text="{Binding now}" Margin="10,50,10,30" HorizontalOptions="Center" TextColor="Black" TextType="Text" FontSize="Title" />
+                    <AbsoluteLayout BackgroundColor="DarkGreen" HorizontalOptions="Center" Margin="0,10,0,10">
+                        <Label Text="Bugünkü Test Sayısı" Margin="20,0,20,0" HorizontalOptions="Center" TextColor="#FFFFFF" WidthRequest="300" HeightRequest="50" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+                        <Label Text="{Binding CovidDaytested}" Margin="20,30,20,0" HorizontalOptions="Center" TextColor="#00FF1E" WidthRequest="300" HeightRequest="30" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+                    </AbsoluteLayout>
+                    <AbsoluteLayout BackgroundColor="DarkGreen" HorizontalOptions="Center" Margin="0,10,0,10">
+                        <Label Text="Bugünkü Vaka Sayısı" Margin="20,0,20,0" HorizontalOptions="Center" TextColor="#FFFFFF" WidthRequest="300" HeightRequest="50" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+                        <Label Text="{Binding CovidDayinfected}" Margin="20,30,20,0" HorizontalOptions="Center" TextColor="#00FF1E" WidthRequest="300" HeightRequest="30" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+                    </AbsoluteLayout>
+                    <AbsoluteLayout BackgroundColor="DarkGreen" HorizontalOptions="Center" Margin="0,10,0,10">
+                        <Label Text="Bugünkü Vefat Sayısı" Margin="20,0,20,0" HorizontalOptions="Center" TextColor="#FFFFFF" WidthRequest="300" HeightRequest="50" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+                        <Label Text="{Binding CovidDaydeceased}" Margin="20,30,20,0" HorizontalOptions="Center" TextColor="#00FF1E" WidthRequest="300" HeightRequest="30" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+                    </AbsoluteLayout>
+                    <AbsoluteLayout BackgroundColor="DarkGreen" HorizontalOptions="Center" Margin="0,10,0,10">
+                        <Label Text="Bugünkü İyileşen Sayısı" Margin="20,0,20,0" HorizontalOptions="Center" TextColor="#FFFFFF" WidthRequest="300" HeightRequest="50" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+                        <Label Text="{Binding CovidDayrecovered}" Margin="20,30,20,0" HorizontalOptions="Center" TextColor="#00FF1E" WidthRequest="300" HeightRequest="30" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+                    </AbsoluteLayout>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Geçmiş Veriler" Icon="historydata.png">
+        <StackLayout>
+            <StackLayout Grid.Row="0">
+                <Picker x:Name="DayPicker" Title="Tarih Seçiniz" SelectedIndexChanged="DayPicker_SelectedIndexChanged" HeightRequest="40" SelectedItem="{Binding now}" ItemsSource="{Binding Covid19Data}" ItemDisplayBinding="{Binding lastUpdatedAtApify}"/>
+                <AbsoluteLayout BackgroundColor="DarkGreen" HorizontalOptions="Center" Margin="0,10,0,10">
+                    <Label Text="Test Sayısı" Margin="20,0,20,0" HorizontalOptions="Center" TextColor="#FFFFFF" WidthRequest="300" HeightRequest="50" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+                    <Label x:Name="TestedText" Margin="20,30,20,0" HorizontalOptions="Center" TextColor="#00FF1E" WidthRequest="300" HeightRequest="30" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+                </AbsoluteLayout>
+                <AbsoluteLayout BackgroundColor="DarkGreen" HorizontalOptions="Center" Margin="0,10,0,10">
+                    <Label Text="Vaka Sayısı" Margin="20,0,20,0" HorizontalOptions="Center" TextColor="#FFFFFF" WidthRequest="300" HeightRequest="50" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+                    <Label x:Name="InfectedText" Margin="20,30,20,0" HorizontalOptions="Center" TextColor="#00FF1E" WidthRequest="300" HeightRequest="30" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+                </AbsoluteLayout>
+                <AbsoluteLayout BackgroundColor="DarkGreen" HorizontalOptions="Center" Margin="0,10,0,10">
+                    <Label Text="Vefat Sayısı" Margin="20,0,20,0" HorizontalOptions="Center" TextColor="#FFFFFF" WidthRequest="300" HeightRequest="50" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+                    <Label x:Name="DeceasedText" Margin="20,30,20,0" HorizontalOptions="Center" TextColor="#00FF1E" WidthRequest="300" HeightRequest="30" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+                </AbsoluteLayout>
+                <AbsoluteLayout BackgroundColor="DarkGreen" HorizontalOptions="Center" Margin="0,10,0,10">
+                    <Label Text="İyileşen Sayısı" Margin="20,0,20,0" HorizontalOptions="Center" TextColor="#FFFFFF" WidthRequest="300" HeightRequest="50" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+                    <Label x:Name="RecoveredText" Margin="20,30,20,0" HorizontalOptions="Center" TextColor="#00FF1E" WidthRequest="300" HeightRequest="30" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+                </AbsoluteLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage Title="Toplam Veri" Icon="totaldata.png">
+        <StackLayout>
+            <Label Text="{Binding now}" Margin="10,50,10,30" HorizontalOptions="Center" TextColor="Black" TextType="Text" FontSize="Title" />
+            <AbsoluteLayout BackgroundColor="DarkGreen" HorizontalOptions="Center" Margin="0,10,0,10">
+                <Label Text="Toplam Test Sayısı" Margin="20,0,20,0" HorizontalOptions="Center" TextColor="#FFFFFF" WidthRequest="300" HeightRequest="50" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+                <Label Text="{Binding CovidTotaltested}" Margin="20,30,20,0" HorizontalOptions="Center" TextColor="#00FF1E" WidthRequest="300" HeightRequest="30" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+            </AbsoluteLayout>
+            <AbsoluteLayout BackgroundColor="DarkGreen" HorizontalOptions="Center" Margin="0,10,0,10">
+                <Label Text="Toplam Vaka Sayısı" Margin="20,0,20,0" HorizontalOptions="Center" TextColor="#FFFFFF" WidthRequest="300" HeightRequest="50" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+                <Label Text="{Binding CovidTotalinfected}" Margin="20,30,20,0" HorizontalOptions="Center" TextColor="#00FF1E" WidthRequest="300" HeightRequest="30" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+            </AbsoluteLayout>
+            <AbsoluteLayout BackgroundColor="DarkGreen" HorizontalOptions="Center" Margin="0,10,0,10">
+                <Label Text="Toplam Aktif Vaka Sayısı" Margin="20,0,20,0" HorizontalOptions="Center" TextColor="#FFFFFF" WidthRequest="300" HeightRequest="50" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+                <Label Text="{Binding CovidTotalActiveinfected}" Margin="20,30,20,0" HorizontalOptions="Center" TextColor="#00FF1E" WidthRequest="300" HeightRequest="30" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+            </AbsoluteLayout>
+            <AbsoluteLayout BackgroundColor="DarkGreen" HorizontalOptions="Center" Margin="0,10,0,10">
+                <Label Text="Toplam Vefat Sayısı" Margin="20,0,20,0" HorizontalOptions="Center" TextColor="#FFFFFF" WidthRequest="300" HeightRequest="50" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+                <Label Text="{Binding CovidTotaldeceased}" Margin="20,30,20,0" HorizontalOptions="Center" TextColor="#00FF1E" WidthRequest="300" HeightRequest="30" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+            </AbsoluteLayout>
+            <AbsoluteLayout BackgroundColor="DarkGreen" HorizontalOptions="Center" Margin="0,10,0,10">
+                <Label Text="Toplam İyileşen Sayısı" Margin="20,0,20,0" HorizontalOptions="Center" TextColor="#FFFFFF" WidthRequest="300" HeightRequest="50" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+                <Label Text="{Binding CovidTotalrecovered}" Margin="20,30,20,0" HorizontalOptions="Center" TextColor="#00FF1E" WidthRequest="300" HeightRequest="30" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
+            </AbsoluteLayout>
+        </StackLayout>
+    </ContentPage>
+
+    <ContentPage Title="Grafik" Icon="datagraphic.png">
+        <chart:SfChart>
+            <chart:SfChart.Title>
+                <chart:ChartTitle Text="Covid-19 Türkiye"/>
+            </chart:SfChart.Title>
+            <chart:SfChart.Legend>
+                <chart:ChartLegend/>
+            </chart:SfChart.Legend>
+            <chart:SfChart.PrimaryAxis>
+                <chart:CategoryAxis/>
+            </chart:SfChart.PrimaryAxis>
+            <chart:SfChart.SecondaryAxis>
+                <chart:NumericalAxis/>
+            </chart:SfChart.SecondaryAxis>
+            <chart:ColumnSeries ItemsSource="{Binding Covid19Data}"
+                            XBindingPath="lastUpdatedAtApify"
+                            YBindingPath="tested"
+                            Label="Test"/>
+            <chart:ColumnSeries ItemsSource="{Binding Covid19Data}"
+                            XBindingPath="lastUpdatedAtApify"
+                            YBindingPath="infected"
+                            Label="Vaka"/>
+            <chart:ColumnSeries ItemsSource="{Binding Covid19Data}"
+                            XBindingPath="lastUpdatedAtApify"
+                            YBindingPath="deceased"
+                            Label="Ölüm"/>
+            <chart:ColumnSeries ItemsSource="{Binding Covid19Data}"
+                            XBindingPath="lastUpdatedAtApify"
+                            YBindingPath="recovered"
+                            Label="İyileşen"/>
+        </chart:SfChart>
+    </ContentPage>
+
+</TabbedPage>

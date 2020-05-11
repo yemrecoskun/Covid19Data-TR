@@ -1,0 +1,13 @@
+C:\Users\jrewi\source\repos\Covid19TR\Covid19TR\Covid19TR\bin\Release\netstandard2.0\Covid19TR.deps.json
+C:\Users\jrewi\source\repos\Covid19TR\Covid19TR\Covid19TR\bin\Release\netstandard2.0\Covid19TR.dll
+C:\Users\jrewi\source\repos\Covid19TR\Covid19TR\Covid19TR\bin\Release\netstandard2.0\ref\Covid19TR.dll
+C:\Users\jrewi\source\repos\Covid19TR\Covid19TR\Covid19TR\bin\Release\netstandard2.0\Covid19TR.pdb
+C:\Users\jrewi\source\repos\Covid19TR\Covid19TR\Covid19TR\obj\Release\netstandard2.0\App.xaml.g.cs
+C:\Users\jrewi\source\repos\Covid19TR\Covid19TR\Covid19TR\obj\Release\netstandard2.0\View\MainPage.xaml.g.cs
+C:\Users\jrewi\source\repos\Covid19TR\Covid19TR\Covid19TR\obj\Release\netstandard2.0\Covid19TR.csproj.CoreCompileInputs.cache
+C:\Users\jrewi\source\repos\Covid19TR\Covid19TR\Covid19TR\obj\Release\netstandard2.0\Covid19TR.AssemblyInfoInputs.cache
+C:\Users\jrewi\source\repos\Covid19TR\Covid19TR\Covid19TR\obj\Release\netstandard2.0\Covid19TR.AssemblyInfo.cs
+C:\Users\jrewi\source\repos\Covid19TR\Covid19TR\Covid19TR\obj\Release\netstandard2.0\XamlC.stamp
+C:\Users\jrewi\source\repos\Covid19TR\Covid19TR\Covid19TR\obj\Release\netstandard2.0\Covid19TR.dll
+C:\Users\jrewi\source\repos\Covid19TR\Covid19TR\Covid19TR\obj\Release\netstandard2.0\ref\Covid19TR.dll
+C:\Users\jrewi\source\repos\Covid19TR\Covid19TR\Covid19TR\obj\Release\netstandard2.0\Covid19TR.pdb
