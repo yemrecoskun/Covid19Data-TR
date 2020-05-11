@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             xmlns:controls="clr-namespace:Covid19TR.Controls"
              xmlns:local="clr-namespace:Covid19TR"
              mc:Ignorable="d"
              x:Class="Covid19TR.MainPage"
@@ -38,6 +39,10 @@
                         <Label Text="{Binding CovidDayrecovered}" Margin="20,30,20,0" HorizontalOptions="Center" TextColor="#00FF1E" WidthRequest="300" HeightRequest="30" TextType="Text" HorizontalTextAlignment="Center" FontSize="Title"/>
                     </AbsoluteLayout>
                 </StackLayout>
+                <controls:AdControlView Grid.Row="1" 
+                                HeightRequest="50" 
+                                AdUnitId="{Static local:Constants.AdUnitIdTest}"
+                                HorizontalOptions="FillAndExpand" />
             </Grid>
         </StackLayout>
     </ContentPage>

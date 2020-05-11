@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Use/jhR5UVBKxwDfY7sJpiQGBb8YL1P9Yvf72EiytxuyIcXBqeggxC0m5HBZhyCQbTOdYwnaY9Uw9TJf3enwpA==",
+  "dgSpecHash": "aS98GXwK0y6DPMmQXRcslT05NYYY51u7Cg7txKLd9LiMkLZAXXxNzHibxsVX7CH8a9F8+hTMuJ5ZOa446gT3kw==",
   "success": true,
   "projectFilePath": "C:\\Users\\jrewi\\source\\repos\\Covid19TR\\Covid19TR\\Covid19TR.Android\\Covid19TR.Android.csproj",
   "expectedPackageFiles": [
@@ -46,8 +46,14 @@
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.vector.drawable\\28.0.0.3\\xamarin.android.support.vector.drawable.28.0.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.versionedparcelable\\28.0.0.3\\xamarin.android.support.versionedparcelable.28.0.0.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.support.viewpager\\28.0.0.3\\xamarin.android.support.viewpager.28.0.0.3.nupkg.sha512",
+    "C:\\Users\\jrewi\\.nuget\\packages\\xamarin.build.download\\0.4.11\\xamarin.build.download.0.4.11.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.4.0.991265\\xamarin.forms.4.4.0.991265.nupkg.sha512"
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.4.0.991265\\xamarin.forms.4.4.0.991265.nupkg.sha512",
+    "C:\\Users\\jrewi\\.nuget\\packages\\xamarin.googleplayservices.ads.base\\71.1720.0\\xamarin.googleplayservices.ads.base.71.1720.0.nupkg.sha512",
+    "C:\\Users\\jrewi\\.nuget\\packages\\xamarin.googleplayservices.ads.lite\\71.1720.1\\xamarin.googleplayservices.ads.lite.71.1720.1.nupkg.sha512",
+    "C:\\Users\\jrewi\\.nuget\\packages\\xamarin.googleplayservices.basement\\71.1620.0\\xamarin.googleplayservices.basement.71.1620.0.nupkg.sha512",
+    "C:\\Users\\jrewi\\.nuget\\packages\\xamarin.googleplayservices.measurement.base\\71.1630.0\\xamarin.googleplayservices.measurement.base.71.1630.0.nupkg.sha512",
+    "C:\\Users\\jrewi\\.nuget\\packages\\xamarin.googleplayservices.measurement.sdk.api\\71.1630.0\\xamarin.googleplayservices.measurement.sdk.api.71.1630.0.nupkg.sha512"
   ],
   "logs": []
 }

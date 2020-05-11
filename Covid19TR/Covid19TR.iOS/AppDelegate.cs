@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Google.MobileAds;
 using UIKit;
 
 namespace Covid19TR.iOS
@@ -23,6 +24,9 @@ namespace Covid19TR.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+
+            MobileAds.Configure("ca-app-pub-1832493294534276~4712951922");
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
