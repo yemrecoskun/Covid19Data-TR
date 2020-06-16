@@ -1,4 +1,4 @@
-# English Readme : [README-EN.MD](https://github.com/yemrecoskun/ETicaret/blob/master/README-EN.md)
+# English Readme : [README-EN.MD](https://github.com/yemrecoskun/Covid19Data-TR/blob/master/README-EN.md)
 <h1 align="center">Covid-19 TR</h1>
 <p align="center">
 <img src="https://github.com/yemrecoskun/Covid19Data-TR/blob/master/Covid19TR/Covid19TR.ScreenShot/giphy.gif"/>
